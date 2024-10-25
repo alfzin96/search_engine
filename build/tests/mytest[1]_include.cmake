@@ -1,0 +1,5 @@
+if(EXISTS "C:/Users/Xeon/Documents/search_engine/build/tests/mytest[1]_tests.cmake")
+  include("C:/Users/Xeon/Documents/search_engine/build/tests/mytest[1]_tests.cmake")
+else()
+  add_test(mytest_NOT_BUILT mytest_NOT_BUILT)
+endif()

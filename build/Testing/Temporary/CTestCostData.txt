@@ -1,0 +1,6 @@
+TestCaseInvertedIndex.TestBasic 1 0.0117103
+TestCaseInvertedIndex.TestBasic2 1 0.0096521
+TestCaseInvertedIndex.TestInvertedIndexMissingWord 1 0.0093701
+TestCaseSearchServer.TestSimple 1 0.0094088
+TestCaseSearchServer.TestTop5 3 0.0128311
+---
