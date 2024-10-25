@@ -5,6 +5,7 @@
 
 > Использовались:
 > Компилятор MinGW 13.2.0
+
 > Библиотека <a href="https://github.com/nlohmann/json">JSON for Modern C++</a>
 
 Внесите пути к файлам, по которым нужно производить поиск в файл **`config.json`** - в поле files.
