@@ -9,6 +9,8 @@
 
 > Библиотека <a href="https://github.com/nlohmann/json">JSON for Modern C++</a>
 
+> Библиотека <a href="https://github.com/google/googletest">google test</a>
+
 Внесите пути к файлам, по которым нужно производить поиск в файл **`config.json`** - в поле files.
 
 Запросы для поиска нужно вносить в файл **`requests.json`**.
