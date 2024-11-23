@@ -9,7 +9,7 @@ std::vector<std::vector<RelativeIndex>> SearchServer::search(const std::vector<s
     result.reserve(queries_input.size());
     for (const auto& request : queries_input)
     {   
-        if (request.empty())
+        if (request.empty())                            // Вставка пустого результата на запрос если запрос пустой
         {
             result.push_back({});
             continue;
@@ -40,9 +40,9 @@ std::vector<std::vector<RelativeIndex>> SearchServer::search(const std::vector<s
         });
         
         std::vector<RelativeIndex> filtered_docs;     // вектор документов, в которых найдено слово
-        for (const auto& entry : sort_words[0].second) filtered_docs.push_back({entry._doc_id, 0});
+        for (const auto& entry : sort_words[0].second) filtered_docs.push_back({entry._doc_id, 0});  // Вставка вектора документов, в которых есть первое слово
         
-        for (size_t i = 1; i < sort_words.size() && !filtered_docs.empty(); ++i)
+        for (size_t i = 1; i < sort_words.size() && !filtered_docs.empty(); ++i)    // Удаление документов, в которых нет следующих слов
         {   
             for (size_t j = 0; j < filtered_docs.size();)
             {
@@ -94,7 +94,7 @@ std::vector<std::vector<RelativeIndex>> SearchServer::search(const std::vector<s
             return a.rank > b.rank;
         });
 
-        if (filtered_docs.size() > max_resposes) filtered_docs.resize(max_resposes);
+        if (filtered_docs.size() > max_resposes) filtered_docs.resize(max_resposes);    // ограничение макс. кол-ва ответов
         result.push_back(filtered_docs);
     }
     return result;
