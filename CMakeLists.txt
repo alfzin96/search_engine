@@ -29,7 +29,7 @@ FetchContent_MakeAvailable(nlohmann_json googletest)
 
 enable_testing()
 
-add_executable(${PROJECT_NAME} src/main.cpp src/converter_json.h src/converter_json.cpp src/inverted_index.h src/inverted_index.cpp src/search_server.h src/search_server.cpp include/my_exceptions.h)
+add_executable(${PROJECT_NAME} src/main.cpp include/converter_json.h src/converter_json.cpp include/inverted_index.h src/inverted_index.cpp include/search_server.h src/search_server.cpp include/my_exceptions.h)
 target_include_directories(${PROJECT_NAME} PUBLIC include src)
 target_link_libraries(${PROJECT_NAME} PRIVATE nlohmann_json::nlohmann_json)
 
